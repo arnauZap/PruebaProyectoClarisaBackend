@@ -3,6 +3,9 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
+// Middleware para parsear JSON
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send('¡Hola desde el backend de Node.js!');
 });
